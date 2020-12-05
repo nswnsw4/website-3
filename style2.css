@@ -1,0 +1,359 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+:root{
+    --mainfont-font-family:"Darker Grotesque", sans-serif;
+    --secondfont-font-family: "Yantramanav",sans-serif:
+}
+
+.nav-bar{
+    width:100%;
+    height:auto;
+    background:transparent;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top:0;
+    z-index: 999;
+}
+
+.toggle{
+    color:white;
+    display:none;
+    font-size:150%;
+}
+
+.sec-1{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    height:6vh;
+    width:25%;
+    background:transparent;
+}
+
+.sec-1 h1{
+    font-size: 200%;
+    cursor: pointer;
+}
+
+.sec-2{
+    height:6vh;
+    width:75%;
+    background:transparent;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sec-2 ul{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration:none;
+}
+
+.sec-2 ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links:hover{
+    color:grey;
+    background: white;
+}
+
+.links{
+    text-decoration:none;
+    font-family:var(--mainfont-font-family);
+    color:white;
+    text-transform: uppercase;
+    margin:2rem;
+    padding:0.4rem;
+    font-size: 130%;
+    transition:0.2s;
+}
+
+.sec-2 ul li a:hover{
+    color:grey;
+}
+
+.hero-section{
+    width:100%;
+    height:100vh;
+    background: url(https://cdn.wallpaperhi.com/2560x1600/20121028/nature%20dark%20leaves%20textures%20monochrome%202560x1600%20wallpaper_www.wallpaperhi.com_41.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-sec{
+    width:75%;
+    height:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.inner-sec h1{
+    font-size:500%;
+    font-family: var(--mainfont-font-family);
+    color:white;
+}
+
+.inner-sec p{
+    font-size:125%;
+    font-family: var(--mainfont-font-family);
+    color:white;
+}
+
+.inner-sec i{
+    color:white;
+    font-size:150%;
+    cursor: pointer;
+    animation: movedown 1s 0s linear infinite none;
+}
+
+.blogPosts{
+    display:grid;
+    grid-template-columns: 0.65fr;
+    grid-template-rows: repeat(5, 45vh);
+    grid-template-areas: 
+    "blogpost-1"
+    "blogpost-2"
+    "blogpost-3"
+    "blogpost-4"
+    "blogpost-5";
+    justify-content: center;
+    grid-gap: 0.5rem;
+}
+
+.post-1{
+    grid-area: blogpost-1;
+}
+
+.post-2{
+    grid-area: blogpost-2;
+}
+
+.post-3{
+    grid-area: blogpost-3;
+}
+
+.post-4{
+    grid-area: blogpost-4;
+}
+
+.post-5{
+    grid-area: blogpost-5;
+}
+
+.blogPost{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+}
+
+.blogimage{
+    width:53%;
+    height:95%;
+    transition:0.2s;
+}
+
+.blogimage:hover{
+    transform: scale(0.9);
+}
+
+.blogimage img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.blogcontent{
+    width: 43%;
+    height:55%;
+    margin-left:1%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.genre{
+    font-family: var(--mainfont-font-family);
+}
+
+.text{
+    font-family: "Roboto",sans-serif;
+    font-size:2.5em;
+}
+
+.button{
+    background:#ecf0f1;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size:1.3em;
+    transition:0.2s;
+}
+
+.button:hover{
+    color:#ecf0f1;
+    background: black;
+}
+
+.date{
+    font-family: var(--mainfont-font-family);
+}
+
+
+
+@keyframes movedown{
+    50%{
+        transform: translateY(-40%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+.sticky{
+    position:fixed;
+    transition:0.2s;
+    box-shadow: 0px 0px 20px grey;
+}
+
+
+.logo{
+    color:white;
+    font-family: var(--mainfont-font-family);
+}
+
+.black{
+    color:black;
+    transition: 0.2s;
+}
+
+.white{
+    background: white;
+    transition:0.2s;
+}
+
+footer{
+    width:100%;
+    height:3vh;
+    background:black;
+}
+
+footer p{
+    font-family:var(--mainfont-font-family);
+    color:white;
+    text-align: center;
+}
+
+@media screen and (max-width:1100px){
+    .blogimage{
+        width:48%;
+    }
+    .blogcontent{
+        width:48%;
+    }
+
+    .blogPosts{
+        grid-template-columns: 0.95fr;
+    }
+}
+
+
+@media screen and (max-width:700px){
+    .blogPost{
+        flex-direction: column;
+    }
+
+    .blogimage{
+        height:48%;
+        width:95%;
+    }
+
+    .blogcontent{
+        height:48%;
+        width:95%;
+        margin-left:0;
+        margin-top: 2%;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+
+    .toggle{
+        display:block;
+    }
+
+    .sec-1{
+        width:100%;
+    }
+
+    .sec-2{
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+    }
+
+
+
+    .sec-2 ul{
+        flex-direction: column;
+    }
+
+    .sec-2 ul li{
+        height:4.5vh;
+        width:100%;
+    }
+
+    .sec-2 ul li:nth-child(1){
+        border-top: 1px solid white;
+    }
+
+    .sec-2 ul li:last-child{
+        border-bottom: 1px solid white;
+    }
+
+    .sec-2 ul li a{
+        padding:0.1rem;
+        font-size:200%;
+    }
+
+    .inner-sec{
+        height: 60%;
+    }
+
+    .inner-sec h1{
+        line-height: 90%;
+    }
+
+    .hero-section{
+        background: url(/frontend/images/leaf-image.jpg);
+    }
+
+    .blogPosts{
+        grid-template-columns: 0.95fr;
+        grid-template-rows: repeat(5, 80vh);
+    }
+
+}
+
